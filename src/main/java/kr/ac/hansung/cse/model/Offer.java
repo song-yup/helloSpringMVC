@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
+@NoArgsConstructor     // 인자가 없는 생성자
 public class Offer {
     private int id;
 

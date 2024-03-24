@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 public class HomeController {
 
     //private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-    private static final Logger logger = LoggerFactory.getLogger("kr.ac.hansung.controller.HomeController");
+    private static final Logger logger = LoggerFactory.getLogger("kr.ac.hansung.cse.controller.HomeController");
 
 
     //@RequestMapping(value = "/", method = RequestMethod.GET)

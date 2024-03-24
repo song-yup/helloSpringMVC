@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-@Repository
+@Repository // 데이터 베이스를 직접 접근하는 단계 (DATA Access)
 public class OfferDao {
 
     private JdbcTemplate jdbcTemplate;  // psa(portable service abstraction, sql(x) api

@@ -22,10 +22,10 @@ public class OfferController {
 
     @GetMapping("/offers")
     public String showOffers(Model model) {
-        List<Offer> offers = offerService.getAllOffers();
-        model.addAttribute("id_offers", offers);
+        List<Offer> offers = offerService.getAllOffers();   // 서비스layer에 모든 offer을 가져와서
+        model.addAttribute("id_offers", offers);    // 모델에다가 저장한다
 
-        return "offers";
+        return "offers";    // 뷰에 return하면 나중에 모델을 렌더링한다.
     }
 
     @GetMapping("/createoffer")
