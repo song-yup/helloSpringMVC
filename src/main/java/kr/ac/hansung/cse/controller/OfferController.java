@@ -31,15 +31,16 @@ public class OfferController {
     @GetMapping("/createoffer")
     public String createOffer(Model model) {
 
-        model.addAttribute("offer", new Offer());
+        model.addAttribute("offer", new Offer());       // 모델에다가 빈 객체 new Offer()을 넣었다
 
         return "createoffer";
     }
 
     @PostMapping("/docreate")
-    public String doCreate(Model model, @Valid Offer offer, BindingResult result) {
+    public String doCreate(Model model, @Valid Offer offer, BindingResult result) {     // 모델에다가 사용자가 입력한 바인딩된 값(결과)을
 
         // System.out.println(offer);
+        // 에러가 있으면
         if(result.hasErrors()) {
             System.out.println("== Form data does not validated ==");
 
@@ -52,6 +53,7 @@ public class OfferController {
             return "createoffer";
         }
 
+        // 에러가 없으면
         // Controller -> Service -> Dao
         offerService.insert(offer);
 

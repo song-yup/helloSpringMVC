@@ -19,6 +19,7 @@ public class OfferService {
     }
 
     public void insert(Offer offer) {
+        // 필요하다면 비즈니스 로직을 추가한다
         offerDao.insert(offer);
     }
 }
