@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+// RestController -> Service -> DAO
+
 @Service
 public class OfferService {
 
@@ -18,8 +20,22 @@ public class OfferService {
         return offerDao.getOffers();
     }
 
-    public void insert(Offer offer) {
+    public Offer getOfferById(int id) {
+        return offerDao.getOffer(id);
+    }
+
+    public void insertOffer(Offer offer) {
         // 필요하다면 비즈니스 로직을 추가한다
         offerDao.insert(offer);
+    }
+
+    public void updateOffer(Offer offer) {
+        // 필요하다면 비즈니스 로직을 추가한다
+        offerDao.update(offer);
+    }
+
+    public void deleteOffer(int id) {
+        // 필요하다면 비즈니스 로직을 추가한다
+        offerDao.delete(id);
     }
 }

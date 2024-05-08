@@ -55,7 +55,7 @@ public class OfferController {
 
         // 에러가 없으면
         // Controller -> Service -> Dao
-        offerService.insert(offer);
+        offerService.insertOffer(offer);
 
         return "offercreated";
     }
